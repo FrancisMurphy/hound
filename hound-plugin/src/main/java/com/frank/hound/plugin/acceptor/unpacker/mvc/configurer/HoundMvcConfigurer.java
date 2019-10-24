@@ -1,6 +1,6 @@
-package com.frank.hound.core.acceptor.unpacker.mvc.configurer;
+package com.frank.hound.plugin.acceptor.unpacker.mvc.configurer;
 
-import com.frank.hound.core.acceptor.unpacker.mvc.interceptor.MvcTraceInterceptor;
+import com.frank.hound.plugin.acceptor.unpacker.mvc.interceptor.MvcTraceInterceptor;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;

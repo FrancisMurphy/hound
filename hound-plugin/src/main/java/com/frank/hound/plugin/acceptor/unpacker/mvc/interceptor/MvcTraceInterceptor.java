@@ -1,4 +1,4 @@
-package com.frank.hound.core.acceptor.unpacker.mvc.interceptor;
+package com.frank.hound.plugin.acceptor.unpacker.mvc.interceptor;
 
 import com.frank.hound.core.acceptor.unpacker.Unpack;
 import com.frank.hound.core.context.HoundContext;

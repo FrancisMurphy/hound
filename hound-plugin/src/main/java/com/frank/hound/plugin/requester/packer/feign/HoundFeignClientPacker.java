@@ -1,4 +1,4 @@
-package com.frank.hound.core.requester.packer.feign;
+package com.frank.hound.plugin.requester.packer.feign;
 
 
 import com.frank.hound.core.entity.HoundTraceContext;

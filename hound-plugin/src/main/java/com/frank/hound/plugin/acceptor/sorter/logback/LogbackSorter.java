@@ -1,4 +1,4 @@
-package com.frank.hound.core.acceptor.sorter.logback;
+package com.frank.hound.plugin.acceptor.sorter.logback;
 
 import com.alibaba.ttl.TransmittableThreadLocal;
 import com.frank.hound.core.acceptor.sorter.ChainSorter;

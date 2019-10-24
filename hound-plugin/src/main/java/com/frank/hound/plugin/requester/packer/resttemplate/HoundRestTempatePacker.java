@@ -1,4 +1,4 @@
-package com.frank.hound.core.requester.packer.resttemplate;
+package com.frank.hound.plugin.requester.packer.resttemplate;
 
 import com.frank.hound.core.entity.HoundTraceContext;
 import com.frank.hound.core.keeper.TraceContextThreadLocalKeeper;

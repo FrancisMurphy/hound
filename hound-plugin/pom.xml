@@ -11,5 +11,12 @@
 
     <artifactId>hound-plugin</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.frank</groupId>
+            <artifactId>hound-core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
 
 </project>
