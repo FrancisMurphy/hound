@@ -11,5 +11,11 @@
 
     <artifactId>hound-starter</artifactId>
 
+    <dependencies>
+
+
+
+    </dependencies>
+
 
 </project>
