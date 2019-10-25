@@ -1,4 +1,4 @@
-package com.frank.hound.plugin.agent.banner;
+package com.frank.hound.agent.banner;
 
 public class BannerPrinter
 {

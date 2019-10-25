@@ -1,11 +1,11 @@
-package com.frank.hound.plugin.agent.transformer;
+package com.frank.hound.agent.transformer;
 
 import com.alibaba.ttl.internal.javassist.CannotCompileException;
 import com.alibaba.ttl.internal.javassist.CtClass;
 import com.alibaba.ttl.internal.javassist.CtMethod;
 import com.alibaba.ttl.internal.javassist.NotFoundException;
 import com.alibaba.ttl.threadpool.agent.internal.transformlet.ClassInfo;
-import com.frank.hound.plugin.agent.transformlet.HoundJavassistTransformlet;
+import com.frank.hound.agent.transformlet.HoundJavassistTransformlet;
 
 import java.io.IOException;
 
