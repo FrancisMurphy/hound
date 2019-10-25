@@ -27,7 +27,7 @@ public class HoundHttpClientPacker implements HttpRequestInterceptor
         HoundTraceContext traceContext = TraceContextThreadLocalKeeper.TRACE_TRACELOCAL_CONTEXT
                 .get();
 
-        if (null != traceContext)
+        if (null == traceContext)
         {
             return;
         }
