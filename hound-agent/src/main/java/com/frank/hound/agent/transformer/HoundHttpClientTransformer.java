@@ -29,7 +29,7 @@ public class HoundHttpClientTransformer implements HoundJavassistTransformlet
                     .getDeclaredMethod(HTTP_CLIENT_BUILDER_CLASS_NAME);
 
             //com.frank.hound.consumer.httpclient.interceptor.HoundHttpClientInterceptor
-            String code = "this.addInterceptorFirst(new com.frank.hound.consumer.httpclient.interceptor.HoundHttpClientInterceptor());";
+            String code = "this.addInterceptorFirst(new com.frank.hound.plugin.httpclient.HoundHttpClientPacker());";
             buildMethod.insertBefore(code);
 
         }

@@ -1,28 +1,27 @@
 package com.frank.hound.core.context;
 
 import com.frank.hound.core.acceptor.sorter.Sort;
-import com.frank.hound.core.acceptor.sorter.SorterInitializer;
+import com.frank.hound.core.acceptor.sorter.SorterLoader;
 import com.frank.hound.core.container.HoundBasicContainer;
 import com.frank.hound.core.container.HoundComponentContainer;
 
 /**
- * 初始化并持有容器等重要实例的上下文
+ * 初始化并持有容器等重要实例的上下文，作用类似于ApplicationContext
  * @author frank
  */
-public class HoundContext implements HoundComponentContext, Sort
+public class HoundCoreContext implements HoundComponentContext, Sort
 {
-    private static HoundContext context = new HoundContext();
+    private static HoundCoreContext context = new HoundCoreContext();
 
     private HoundComponentContainer componentContainer;
 
     private Sort firstSorter;
 
-
-    private HoundContext()
+    private HoundCoreContext()
     {
         componentContainer = new HoundComponentContainer();
-        SorterInitializer sorterInitializer = new SorterInitializer();
-        firstSorter = sorterInitializer.getFirstSorter();
+        SorterLoader sorterLoader= new SorterLoader();
+        firstSorter = sorterLoader.getFirstSorter();
     }
 
     @Override
@@ -36,7 +35,7 @@ public class HoundContext implements HoundComponentContext, Sort
         return null;
     }
 
-    public static HoundContext getContext()
+    public static HoundCoreContext getContext()
     {
         return context;
     }

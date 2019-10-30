@@ -10,12 +10,12 @@ import java.util.LinkedList;
  * Sorter manager
  * @author frank
  */
-public class SorterInitializer
+public class SorterLoader
 {
     @Getter
     private ChainSorter firstSorter;
 
-    public SorterInitializer()
+    public SorterLoader()
     {
         initSorters();
     }

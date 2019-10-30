@@ -1,7 +1,7 @@
 package com.frank.hound.plugin.spring.mvc.interceptor;
 
 import com.frank.hound.core.acceptor.unpacker.Unpack;
-import com.frank.hound.core.context.HoundContext;
+import com.frank.hound.core.context.HoundCoreContext;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
@@ -17,7 +17,7 @@ public class MvcTraceInterceptor implements HandlerInterceptor
 
     public MvcTraceInterceptor()
     {
-        mvcUnpacker = HoundContext
+        mvcUnpacker = HoundCoreContext
                 .getContext().getComponent("mvc",Unpack.class);
     }
 
