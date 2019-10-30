@@ -1,6 +1,9 @@
 package com.frank.hound.core.acceptor.sorter;
 
-public interface Sort
+/**
+ * Action to sort
+ */
+public interface Sorter
 {
     /**
      * start sort

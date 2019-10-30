@@ -9,7 +9,7 @@ import lombok.Setter;
  * Chain of responsibility
  * @author frank
  */
-public abstract class ChainSorter implements Sort
+public abstract class ChainSorter implements Sorter
 {
     @Setter
     private ChainSorter nextSorter;

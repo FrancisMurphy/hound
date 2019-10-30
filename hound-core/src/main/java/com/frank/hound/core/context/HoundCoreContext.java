@@ -1,6 +1,6 @@
 package com.frank.hound.core.context;
 
-import com.frank.hound.core.acceptor.sorter.Sort;
+import com.frank.hound.core.acceptor.sorter.Sorter;
 import com.frank.hound.core.acceptor.sorter.SorterLoader;
 import com.frank.hound.core.container.HoundBasicContainer;
 import com.frank.hound.core.container.HoundComponentContainer;
@@ -9,13 +9,13 @@ import com.frank.hound.core.container.HoundComponentContainer;
  * 初始化并持有容器等重要实例的上下文，作用类似于ApplicationContext
  * @author frank
  */
-public class HoundCoreContext implements HoundComponentContext, Sort
+public class HoundCoreContext implements HoundComponentContext, Sorter
 {
     private static HoundCoreContext context = new HoundCoreContext();
 
     private HoundComponentContainer componentContainer;
 
-    private Sort firstSorter;
+    private Sorter firstSorter;
 
     private HoundCoreContext()
     {
@@ -43,6 +43,7 @@ public class HoundCoreContext implements HoundComponentContext, Sort
     @Override
     public void sort()
     {
+        //TODO： 待优化，准备使用单线程事件驱动模型，正在斟酌如何实现
         firstSorter.sort();
     }
 }

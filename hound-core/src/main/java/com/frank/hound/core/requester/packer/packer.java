@@ -1,6 +1,6 @@
 package com.frank.hound.core.requester.packer;
 
-public interface pack
+public interface packer
 {
     void pack();
 }

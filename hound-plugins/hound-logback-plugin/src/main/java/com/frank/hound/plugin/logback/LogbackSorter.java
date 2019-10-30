@@ -3,7 +3,7 @@ package com.frank.hound.plugin.logback;
 import com.alibaba.ttl.TransmittableThreadLocal;
 import com.frank.hound.core.acceptor.sorter.ChainSorter;
 import com.frank.hound.core.annotation.HoundComponent;
-import com.frank.hound.core.constant.TraceContextConstant;
+import com.frank.hound.core.constant.TraceContextConstants;
 import com.frank.hound.core.entity.HoundTraceContext;
 import org.slf4j.MDC;
 import org.springframework.util.StringUtils;
@@ -26,16 +26,16 @@ public class LogbackSorter extends ChainSorter
     {
         if(null == traceContextThreadLocal.get() || StringUtils
                 .isEmpty(traceContextThreadLocal.get().getContext(
-                        TraceContextConstant.TRACE_CONTEXT_HEAD)))
+                        TraceContextConstants.TRACE_CONTEXT_HEAD)))
         {
             String newTraceId = initTraceId(traceContextThreadLocal);
 
-            MDC.put(TraceContextConstant.TRACE_CONTEXT_HEAD, newTraceId);
+            MDC.put(TraceContextConstants.TRACE_CONTEXT_HEAD, newTraceId);
         }
         else
         {
-            MDC.put(TraceContextConstant.TRACE_CONTEXT_HEAD, traceContextThreadLocal.get().getContext(
-                    TraceContextConstant.TRACE_CONTEXT_HEAD));
+            MDC.put(TraceContextConstants.TRACE_CONTEXT_HEAD, traceContextThreadLocal.get().getContext(
+                    TraceContextConstants.TRACE_CONTEXT_HEAD));
         }
     }
 
@@ -51,7 +51,7 @@ public class LogbackSorter extends ChainSorter
         String newTraceId = uuid.toString().replace("-", "");
 
         HoundTraceContext traceContext = new HoundTraceContext();
-        traceContext.addContext(TraceContextConstant.TRACE_CONTEXT_HEAD, newTraceId);
+        traceContext.addContext(TraceContextConstants.TRACE_CONTEXT_HEAD, newTraceId);
         traceContextThreadLocal.set(traceContext);
         return newTraceId;
     }

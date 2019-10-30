@@ -1,6 +1,6 @@
 package com.frank.hound.core.constant;
 
-public interface TraceContextConstant
+public interface TraceContextConstants
 {
     /**
      * The id that trace business link

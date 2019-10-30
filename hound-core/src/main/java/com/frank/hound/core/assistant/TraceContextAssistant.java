@@ -1,6 +1,6 @@
 package com.frank.hound.core.assistant;
 
-import com.frank.hound.core.constant.TraceContextConstant;
+import com.frank.hound.core.constant.TraceContextConstants;
 import org.springframework.util.StringUtils;
 
 import java.lang.reflect.Field;
@@ -13,7 +13,7 @@ public class TraceContextAssistant
 
     static
     {
-        Field[] traceContextFields = TraceContextConstant.class.getFields();
+        Field[] traceContextFields = TraceContextConstants.class.getFields();
 
         try
         {
