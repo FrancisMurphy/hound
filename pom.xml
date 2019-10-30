@@ -15,6 +15,7 @@
         <module>hound-springboot-autoconfigure</module>
         <module>hound-springboot-starter</module>
         <module>hound-agent</module>
+        <module>hound-plugins</module>
     </modules>
 
     <dependencyManagement>

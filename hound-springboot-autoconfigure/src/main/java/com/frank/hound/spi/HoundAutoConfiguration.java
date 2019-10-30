@@ -1,7 +1,7 @@
 package com.frank.hound.spi;
 
-import com.frank.hound.plugin.acceptor.unpacker.mvc.configurer.HoundMvcConfigurer;
-import com.frank.hound.plugin.acceptor.unpacker.mvc.interceptor.MvcTraceInterceptor;
+import com.frank.hound.plugin.springmvc.configurer.HoundMvcConfigurer;
+import com.frank.hound.plugin.springmvc.interceptor.MvcTraceInterceptor;
 import com.frank.hound.plugin.requester.packer.feign.HoundFeignClientPacker;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.context.annotation.Bean;
